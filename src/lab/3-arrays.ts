@@ -1,12 +1,17 @@
 /** 3 - Arrays and Tuples */
 
-// DEMO: Array Type Inference
+// DEMO: Arrs ay Type Inference
+const fruits: string[] = ["orange", "apple"]
 
-// DEMO: Array (containing single types)
+// DEMO: Array (containing single =types)
 
 // DEMO: Tuples (single type tuple, mixed type tuple)
+const birthday: [number, number, number, string] = [7, 11, 2001, "hello"]
 
 // DEMO: Labeled Tuple (e.g. birthday, fruits)
+function printBirthday(birthday: [day: number, month: number, year: number]) {
+
+}
 
 // DEMO: Array.prototype.map
 // DEMO: Array.prototype.filter

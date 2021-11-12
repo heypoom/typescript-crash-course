@@ -3,8 +3,19 @@
 // Keywords to read: Arrow Functions, Lexical Scoping
 
 // DEMO: Add, Subtract
+function add(a: number, b: number) {
+  return a + b
+}
+
+const sub = (a: number, b: number) => a - b
 
 // DEMO: Calling other functions
+const add3 = (n: number) => add(n, 3)
+
+const addCurry = (n: number) => (m: number) => m + n
+const add4 = addCurry(4)
+
+console.log(add4(5))
 
 /**
  * TODO(5)
