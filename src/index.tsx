@@ -3,6 +3,7 @@ import { render } from "react-dom"
 import App from "./App"
 
 import "./lab/0-experiment"
+import "./lab/2-functions"
 import "./lab/3-arrays"
 
 const rootElement = document.getElementById("root")
