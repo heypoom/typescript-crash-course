@@ -1,7 +1,13 @@
-import { render } from "react-dom";
+import { render } from "react-dom"
 
-import App from "./App";
+import App from "./App"
 
-const rootElement = document.getElementById("root");
+import "./lab/0-experiment"
+import "./lab/3-arrays"
 
-render(<App />, rootElement);
+const rootElement = document.getElementById("root")
+
+render(<App />, rootElement)
+
+// TODO(2): Add a console log statement here!
+console.log("Hello, Poom!")
