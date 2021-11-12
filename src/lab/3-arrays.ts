@@ -13,9 +13,24 @@ function printBirthday(birthday: [day: number, month: number, year: number]) {
 
 }
 
+printBirthday([7, 11, 2001])
+
 // DEMO: Array.prototype.map
+const numbers = [1, 2, 3, 4, 5]
+numbers.map(n => n * 5) // [5, 10, 15, 20, 25]
+numbers.map(n => `Queue #${n}`) // ["Queue #1", "Queue #2", "Queue #3", "Queue #4", "Queue #5"]
+
 // DEMO: Array.prototype.filter
+numbers.filter(n => n <= 3) // [1, 2, 3]
+
 // DEMO: Array.prototype.reduce
+numbers.reduce((acc, n) => acc + n, 0) //?
+
+// 0 + 1 = 1 
+// 1 + 2 = 3
+// 3 + 3 = 6
+// 6 + 4 = 10
+// 10 + 5 = 15
 
 /**
  * TODO(6) - Please create these.

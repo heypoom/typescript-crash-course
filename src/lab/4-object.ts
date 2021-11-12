@@ -1,20 +1,106 @@
 /** Objects */
 
 // DEMO: Object Type Inference
+const person2 = {
+	name: 'John',
+	age: 30,
+	hobbies: ['Sports', 'Cooking'],
+	role: 'admin',
+	isAdmin: true,
+}
+
+// interface Person {
+// 	name: string;
+// 	age: number;
+// 	hobbies: string[];
+// 	role: string;
+// 	isAdmin: boolean;
+// }
+
+// Type can do more things, e.g. index types, union, intersection
+type Person = {
+	name: string;
+	age: number;
+	hobbies: string[];
+	role: string;
+	isAdmin: boolean;
+}
+
+function describePerson(person: Person) {
+	console.log(`${person.name} is ${person.age} years old.`)
+}
+
+describePerson(person2)
 
 // DEMO: Inline Object Typing
+const person3: { name: string, age: number} = {
+	name: 'John',
+	age: 30,
+}
 
-// DEMO: Using the Record utility type. More on this later.
 
 // DEMO: Index Types, Index Signatures
+const scores: { [key: string]: number } = {
+	john: 10,
+	jane: 20,
+	mary: 30,
+	prayuth: 40,
+	prawit: 50
+}
+
+// DEMO: Using the Record utility type. More on this later.
+const scores2: Record<string, number> = {
+	john: 10,
+	jane: 20,
+	mary: 30,
+	prayuth: 40,
+	prawit: 50
+}
 
 // DEMO: Shaping the Data Model
+interface Attendee {
+	person: Person
+}
+
+interface TreeNode {
+	value: number
+	left?: TreeNode
+	right?: TreeNode
+}
 
 // DEMO: "Interface" vs "Types"
 
 // DEMO: Optional Fields
 
+const xxx = {
+	attendees: null
+}
+
+const a = undefined
+const b = null
+
+function sayHi(options: {name: string, age?: number}) {
+
+}
+
+sayHi({name: 'John', age: undefined})
+sayHi({name: 'John', age: 50})
+
 // DEMO: Optional Chaining
+
+const person = {
+	husband: {
+		contact: {
+			phone: '1234567890'
+		}
+	}
+}
+
+if (person?.husband?.contact?.phone) {
+	console.log(person.husband.contact.phone)
+}
+
+}
 
 /**
  * TODO(7)
