@@ -10,11 +10,12 @@ const placeholder = "https://picsum.photos/200/200"
 
 export function UserProfileCard(props) {
   const { user } = props ?? {}
-  const { username = "Cindy", age, photo = placeholder } = user ?? {}
+  const { username, age, photo = placeholder } = user ?? {}
 
   return (
     <section className="user-profile-card">
-      <img src={photo} />
+      <img src={photo} alt="Profile" />
+
       <h1>{username}</h1>
       <p>Age {age}</p>
     </section>
